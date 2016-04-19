@@ -326,7 +326,7 @@
               var id = button.data('id');
               var modal = $(this);
 
-              if(typeof id != 'undefined' && id != '') {
+              if(typeof id != 'undefined' && id !== '') {
                 scope.movement.update = true;
               }
 
