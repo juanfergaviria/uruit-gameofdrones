@@ -14,6 +14,7 @@ By _Juan Fernando Gaviria S._ jfgaviria@gmail.com
 3. cd frontend/
 4. npm install
 5. bower install
+6. Run mongo query: db.movements.insertMany([{"name":"Papper","kills":"Rock"},{"name":"Rock","kills":"Scissors"},{"name":"Scissors","kills":"Papper"}])
 
 **Note:** Modify **backend/config/connections.js** if you required it
 
