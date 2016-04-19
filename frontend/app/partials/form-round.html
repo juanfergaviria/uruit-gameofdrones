@@ -1,0 +1,24 @@
+<rounds>
+  <div class="col-md-4 col-md-offset-4">
+    <h2>Round {{ round }}</h2>
+  </div>
+  <div class="col-md-4 col-md-offset-4">
+    <h3 class="playername"></h3>
+  </div>
+  <div class="col-md-4">
+    <h3>Stats:</h3>
+    <div class="col-md-6">Round</div>
+    <div class="col-md-6">Winner</div>
+    <div ng-repeat="stat in stats | orderBy:'round'">
+      <div class="col-md-6">{{ stat.round }}</div>
+      <div class="col-md-6">{{ stat.player }}</div>
+    </div>
+  </div>
+  <div class="col-md-4 col-md-offset-4">
+    <ul>
+      <li ng-repeat="movement in movements">
+        <a ng-click="selectMovement(movement.name)">{{ movement.name }}</a>
+      </li>
+    </ul>
+  </div>
+</rounds>

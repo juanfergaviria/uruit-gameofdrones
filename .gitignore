@@ -1,0 +1,12 @@
+# Game of Drones - Ignore
+
+# General
+.DS_STORE
+.idea
+
+#Backend
+backend/node_modules
+
+#Frontend
+frontend/node_modules
+frontend/app/bower_components

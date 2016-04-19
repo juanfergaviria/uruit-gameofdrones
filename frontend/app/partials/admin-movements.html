@@ -1,0 +1,58 @@
+<div class="col-md-6 col-md-offset-2">
+  <h2>Movements</h2>
+</div>
+
+<div class="col-md-6 col-md-offset-2">
+  <table class="table table-striped ">
+    <thead>
+      <tr>
+        <th>Movement</th>
+        <th>Kills</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="movement in movements">
+        <td>{{ movement.name }}</td>
+        <td>{{ movement.kills }}</td>
+        <td>
+          <a data-toggle="modal" data-target="#updateMovement" data-id="{{ movement.id }}" data-name="{{ movement.name }}" data-kills="{{ movement.kills }}"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
+          <a ng-click="deleteMovement(movement.id)"><i class="fa fa-trash" aria-hidden="true"></i></a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="modal fade update-movement" id="updateMovement" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title">Create/Update Movement</h4>
+        </div>
+        <div class="modal-body">
+          <div class="form-inline">
+            <div class="form-group">
+              <label for="movement-name">Name: </label>
+              <input type="text" class="form-control movement-name" id="movement-name" ng-model="movement.name">
+            </div>
+            <div class="form-group">
+              <label for="movement-kills">Kills: </label>
+              <input type="text" class="form-control movement-kills" id="movement-kills" ng-model="movement.kills">
+            </div>
+          </div>
+          <input type="hidden" class="movement-id" id="movement-id" value="" ng-model="movement.id">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-success" ng-click="saveMovement()">Save</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="col-md-4">
+  <a class="btn btn-success btn-block" data-toggle="modal" data-target="#updateMovement">Add Movement</a>
+  <a class="btn btn-primary btn-block" ui-sref="form.start">New Game</a>
+</div>
