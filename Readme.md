@@ -1,5 +1,6 @@
 # **Game of Drones**
-Technical Test for UruIT
+## A Rock, Papper, Scissors game
+### Technical Test for UruIT
 By _Juan Fernando Gaviria S._ jfgaviria@gmail.com
 
 ### Prerequisites
